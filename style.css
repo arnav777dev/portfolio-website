@@ -1,0 +1,263 @@
+@import url(https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Be Vietnam Pro", "sans-serif";
+  scroll-behavior: smooth;
+}
+:root {
+  --bgOrange: #e84949;
+}
+.wrapper {
+  height: 100vh;
+  /* overflow-x: hidden;
+  overflow-y: auto; */
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.name {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+}
+.logo_text {
+  margin-left: -1.4rem;
+  font-size: 30px;
+}
+.logo {
+  width: 80px;
+}
+
+.header_items {
+  display: flex;
+  gap: 2rem;
+  padding: 0 4em;
+}
+.header_items div {
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.header_items div:hover {
+  font-weight: bold;
+  transition: 0.8s;
+}
+.header_items div a {
+  color: black;
+}
+a {
+  text-decoration: none;
+}
+
+.container_hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 5rem;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  padding-bottom: 8rem;
+}
+
+.left_hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.hero_heading {
+  font-size: 35px;
+  color: #343d68;
+  font-weight: 500;
+}
+
+.hero_subheading {
+  font-size: 45px;
+  line-height: 45px;
+}
+.role {
+  color: #4e45d5;
+  font-weight: 800;
+}
+
+.hero_description {
+  margin-top: 1rem;
+  width: 70%;
+  font-weight: 500;
+}
+
+.hireme_btn {
+  color: white;
+  position: relative;
+  max-width: 200px;
+  border: 2px solid #e84949;
+  background-color: #e84949;
+  padding: 0.8rem 2.3rem;
+  font-size: 18px;
+  z-index: 1;
+  /*L R T B */
+  box-shadow: 5px 5px 7px 0px #0000003f;
+}
+
+.hireme_btn:hover::before {
+  transform: scaleX(1);
+  /* z-index: -1; */
+}
+
+.hireme_btn:hover {
+  border: solid 2px var(--bgOrange);
+  color: black;
+}
+
+.hireme_btn::before {
+  content: "";
+  background-color: #ffffff;
+  color: black;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 1s;
+  z-index: -1;
+}
+
+.faded_Text {
+  position: absolute;
+
+  bottom: -16%;
+  left: -5%;
+  font-weight: bold;
+  transition: all 3s;
+
+  font-size: 7em;
+  color: rgb(231, 231, 231);
+  user-select: none;
+}
+
+.right_hero {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.user-image {
+  padding: 2.5rem;
+  filter: grayscale(1);
+  transition: all 1s;
+  animation: scaleImage 5s linear infinite;
+}
+
+.user-image img {
+  z-index: -10;
+}
+
+@keyframes scaleImage {
+  0% {
+    filter: grayscale(1);
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+    filter: grayscale(0);
+    box-shadow: 3px 3px 10px black;
+  }
+  100% {
+    transform: scale(1);
+    filter: grayscale(1);
+  }
+}
+
+.icon-dots {
+  bottom: -2rem;
+  right: -1rem;
+  z-index: 9;
+  animation: dotsAnimation 3s linear infinite;
+}
+@keyframes dotsAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.icon-cube {
+  top: 1rem;
+  right: 1rem;
+  z-index: 9;
+  animation: cubeAnimation 3s linear infinite;
+}
+@keyframes cubeAnimation {
+  0% {
+    transform: rotateY(0deg) translateY(0);
+  }
+  50% {
+    transform: rotateY(180deg) translateY(-12px);
+  }
+  100% {
+    transform: rotateY(360deg) translateY(0);
+  }
+}
+
+.icon-circle {
+  bottom: 0rem;
+  left: 0rem;
+  z-index: 9;
+  animation: circleAnimation 3s linear infinite;
+}
+@keyframes circleAnimation {
+  0% {
+    transform: rotateY(0deg) translateY(0);
+  }
+  50% {
+    transform: rotateY(180deg) translateY(-12px);
+  }
+  100% {
+    transform: rotateY(360deg) translateY(0);
+  }
+}
+
+.icon-zigzag {
+  z-index: 9;
+  animation: zigzagAnimation 3s linear infinite;
+}
+@keyframes zigzagAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-40px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.icon-plus {
+    right: 15rem;
+  z-index: 9;
+  animation: circleAnimation 3s linear infinite;
+}
